@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sudo-gui"
+version = "0.1.0"
+description = "Qt-6 sudoers editor (safe-mode)"
+authors = [{name = "Your Name"}]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["PyQt6>=6.5"]
+
+[project.optional-dependencies]
+dev = ["ruff", "pytest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sudo_gui*"]

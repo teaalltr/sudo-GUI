@@ -1,0 +1,11 @@
+name: sudo-gui               # call the env whatever you like
+channels:
+  - conda-forge              # newer PyQt builds live here
+dependencies:
+  - python >=3.11,<3.13
+  - pyqt >=6.5,<6.8          # Qt-6 GUI toolkit
+  - pip                      # we still need pip for the editable link
+  - setuptools >=61
+  - packaging                # ensures a recent ‘packaging’ library
+  - pip:
+      - -e .                 # add *this* checkout in editable mode
